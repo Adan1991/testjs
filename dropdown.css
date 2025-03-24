@@ -2,12 +2,27 @@
     color: blue;
     cursor: pointer;
     text-decoration: underline;
+    font-weight: bold;
+    display: inline-block;
+    transition: color 0.3s;
+}
+
+.clickable:hover {
+    color: darkblue;
 }
 
 #dropdownContent {
-    display: none;
-    margin-top: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease-out, opacity 0.3s ease-out, padding 0.3s ease-out;
     background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 0 10px; /* Start with no padding so it doesn't "jump" */
+}
+
+#dropdownContent.active {
+    max-height: 200px; /* Adjust based on your content size */
+    opacity: 1;
+    padding: 10px;
 }
