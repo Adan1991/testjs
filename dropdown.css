@@ -22,7 +22,7 @@
 }
 
 #dropdownContent.active {
-    max-height: 200px; /* Adjust based on your content size */
+    max-height: 700px; /* Adjust based on your content size */
     opacity: 1;
     padding: 10px;
 }
