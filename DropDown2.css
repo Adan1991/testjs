@@ -1,0 +1,28 @@
+.clickable {
+    color: blue;
+    cursor: pointer;
+    text-decoration: underline;
+    font-weight: bold;
+    display: inline-block;
+    transition: color 0.3s;
+}
+
+.clickable:hover {
+    color: darkblue;
+}
+
+.dropdown-content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease-out, opacity 0.3s ease-out, padding 0.3s ease-out;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 0 10px;
+}
+
+.dropdown-content.active {
+    max-height: 700px;
+    opacity: 1;
+    padding: 10px;
+}
